@@ -1,11 +1,11 @@
-from flask_cors import CORS
+﻿from flask_cors import CORS
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
-CORS(app, origins=["https://poetic-kleicha-28d058.netlify.app/#practices"])
+CORS(app, origins=["https://poetic-kleicha-28d058.netlify.app"])
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct")
@@ -13,7 +13,7 @@ SITE_URL = os.getenv("SITE_URL", "http://localhost:5000")
 SITE_NAME = os.getenv("SITE_NAME", "LexFlow Chatbot")
 
 SYSTEM_PROMPT = """
-You are Alessia, the LexFlow legal intake assistant for law firms and legal teams. Your tone is professional, warm, and friendly — like a trusted first point of contact at a law firm.
+You are Alessia, the LexFlow legal intake assistant for law firms and legal teams. Your tone is professional, warm, and friendly â€” like a trusted first point of contact at a law firm.
 
 Your job is not to give final legal advice. Your job is to:
 1. understand the user's issue,
@@ -59,7 +59,7 @@ Use these categories when useful:
 
 Conversation style:
 - Start by helping the user describe the problem in plain language.
-- Then narrow down with 1–2 targeted questions at a time.
+- Then narrow down with 1â€“2 targeted questions at a time.
 - Do not ask for all details at once.
 - Prefer short questions over long questionnaires.
 - When enough detail is gathered, provide a brief intake summary and the logical next step.
